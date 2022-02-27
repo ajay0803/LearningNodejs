@@ -1,0 +1,18 @@
+const http = require('http');
+
+const server = http.createServer((req,res) => {
+    // console.log(req);
+    if(req.url === "/"){
+        res.end('Welcome to our homepage');
+    }
+    if(req.url === "/about"){
+        res.end('Welcome to about page');
+    }
+    res.end('Not Founf');
+    // res.end(`
+    // <h1>Not Found<h1>
+    // <a href="/" back/>
+    // `);
+})
+
+server.listen(5000);
